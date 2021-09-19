@@ -9,6 +9,11 @@ body {
     color: #4c6986
 }
 
+h1 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
 .wrapper {
     display: flex;
     height: 800px;
