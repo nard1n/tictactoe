@@ -43,7 +43,7 @@ export default class Game {
         for(const combo of winningCombos) {
             const [a,b,c] = combo;
 
-            if (this.board[a] &&
+            if(this.board[a] &&
                 (this.board[a] === this.board[b] && this.board[a] === this.board[c])) {
                     return combo;
                 }
