@@ -1,8 +1,13 @@
 export default class Game {
 
     constructor(){
+        this.newGame();
+    }
+
+    newGame(){
         this.turn = "X";
         this.board = new Array(9).fill(null);
+        this.winner = null;
     }
 
     nextTurn(){
@@ -15,11 +20,11 @@ export default class Game {
     
     makeMove(i){
 
-        if (this.endofGame) {
+        if(this.endofGame){
             return;
         }
 
-        if (this.board[i]) {
+        if(this.board[i]){
             return;
         }
         this.board[i] = this.turn;
@@ -40,7 +45,7 @@ export default class Game {
             [0,4,8],
             [6,4,2]
         ]
-        for(const combo of winningCombos) {
+        for(const combo of winningCombos){
             const [a,b,c] = combo;
 
             if(this.board[a] &&
