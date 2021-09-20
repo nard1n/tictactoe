@@ -14,13 +14,19 @@ h1 {
     font-weight: bold;
 }
 
+.title {
+    max-width: 500px;
+
+}
+
 .wrapper {
     display: flex;
     height: 800px;
     max-width: 1440px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0 auto;
+    padding: 40px;
 }
 
 .restart {
@@ -105,3 +111,24 @@ h1 {
     background-color: #eee;
 }
 
+.tile-x {
+    color: #42BED7;
+}
+
+.tile-o {
+    color: #D7BAFB;
+}
+
+.tile-winner span{
+    color: #23CE6B;
+}
+
+@media only screen and (max-width: 1200px) {
+    .wrapper {
+        flex-direction: column;
+    }  
+
+    .left {
+        margin-bottom: 50px;
+    }
+}
