@@ -4,9 +4,7 @@ import GameView from './GameView.js';
 let game = new Game();
 let gameView = new GameView();
 
-document.querySelector(".restart").addEventListener("click", () => {
-    onRestartClick();
-});
+document.querySelector(".restart").addEventListener("click", () => { onRestartClick();});
 
 document.querySelectorAll(".board-tile").forEach((tile) => {
     tile.addEventListener("click", () => {
