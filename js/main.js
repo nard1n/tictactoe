@@ -9,8 +9,8 @@ let tiles = document.querySelectorAll(".board-tile");
 tiles.forEach((tile) => {
     tile.addEventListener("click", () => {
         onTileClick(tile.dataset.index);
-    })
-})
+    });
+});
 
 
 function onTileClick(i){

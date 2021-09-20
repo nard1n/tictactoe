@@ -12,7 +12,7 @@ export default class Game {
             this.turn = "X";
         }
     }
-
+    
     makeMove(i){
 
         if (this.endofGame) {
