@@ -5,12 +5,14 @@ export default class GameView {
         for (let i = 0; i < game.board.length; i++){
             const tile = document.querySelector(`.board-tile [data-index="${i}"]`);
             tile.textContent = game.board[i];
+
+            let classType = gmae.board
         };
     };
 
     updateTurn(game){
         let playerX = document.querySelector(".player-x");
-        let playerO = document.querOSelector(".player-o");
+        let playerO = document.querySelector(".player-o");
         playerX.classList.remove("active");
         playerY.classList.remove("active");
 
