@@ -13,7 +13,7 @@ tiles.forEach((tile) => {
     });
 });
 
-function onTileClick(i){
+function onTileClick(i) {
     game.makeMove(i);
     gameView.update(game);
 }
@@ -22,8 +22,10 @@ function onRestartClick() {
     game = new Game();
     gameView.update(game);
 
-    let tile = document.querySelectorAll(".board-tile")
-    tile.forEach((e)=> {
-        e.classList.remove("tile-winner")
-    })
+    // let tile = document.querySelectorAll(".board-tile")
+    // tile.forEach((e)=> {
+    //     e.classList.remove("tile-winner")
+    // })
 }
+
+gameView.update(game)
