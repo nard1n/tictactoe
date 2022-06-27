@@ -11,8 +11,9 @@ export default class Game {
     }
 
     nextTurn() {
-        if(this.turn === "X") {
+        if(this.turn == "X") {
             this.turn = "O";
+            
         } else {
             this.turn = "X";
         }
@@ -20,15 +21,18 @@ export default class Game {
     
     makeMove(i) {
 
-        if(this.endofGame){
-            return;
-        }
-
+        if(this.endofGame()){
+            return;          
+        }                    
+        
         if(this.board[i]){
             return;
         }
+
         this.board[i] = this.turn;
+        
         let winningCombination = this.checkWin();
+        
         if(!winningCombination){
             this.nextTurn();
         }
@@ -58,7 +62,7 @@ export default class Game {
     }
 
     endofGame(){
-        let winningCombination = this.winningCombos;
+        let winningCombination = this.checkWin();
         if(winningCombination){
             return true;
         } else {
