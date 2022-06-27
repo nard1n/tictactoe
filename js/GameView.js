@@ -11,7 +11,7 @@ export default class GameView {
         playerX.classList.remove("active");
         playerO.classList.remove("active");
 
-        if(game.turn == 'X') {
+        if (game.turn == 'X') {
             playerX.classList.add('active');
 
         } else {
@@ -20,10 +20,14 @@ export default class GameView {
     }
 
     updateBoard(game) {
-        const winningCombination = game.checkWin();
         
+        const winningCombination = game.checkWin();
+
         for (let i = 0; i < game.board.length; i++){
-            const tile = document.querySelector(`.board-tile[data-index="${i}"]`);  
+            
+            const tile = document.querySelector(`.board-tile[data-index='${i}']`);
+            tile.textContent = game.board[i];
+             
             
             tile.classList.remove("tile-winner");
 
