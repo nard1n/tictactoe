@@ -6,7 +6,7 @@ A vanilla JavaScript Tic Tac Toe - Built for fun and learning purposes.
 Screenshot of application:
 ![Screenshot](./screenshot.png)
 
-Live link, [here](https://nard1n.github.io/tictactoe)
+Live link, [here](https://tictactoe-sage.vercel.app/)
 
 ## Table of Contents
 
